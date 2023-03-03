@@ -160,3 +160,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'MontserratAlternates';
+    src: local('MontserratAlternates Semibold'), local('MontserratAlternates-Semibold'),
+        url('../fonts/MontserratAlternates-SemiBold.woff2') format('woff2'),
+        url('../fonts/MontserratAlternates-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
