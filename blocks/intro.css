@@ -1,4 +1,72 @@
 .intro {
     background-image: url(../images/header-bg.png);
-    height: 200px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.intro-content {
+    padding: 128px 0 60px 980px;
+    max-width: 590px;
+}
+
+.intro-markup {
+    color: #ff922e;
+}
+
+.intro-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    margin: 0;
+}
+
+.intro-list {
+    margin: 50px 0 120px 0;
+}
+
+.intro-list-item {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    margin-bottom: 25px;
+}
+
+.intro-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.intro-list-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.intro-list-text {
+    margin: 0;
+}
+
+.intro-button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.intro-button {
+    background-color: white;
+    width: 315.52px;
+    padding: 20px 40px;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #152131;
+    margin-right: 15px;
+}
+
+.intro-button-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
 }
