@@ -2,6 +2,7 @@
     background-image: url(../images/header-bg.png);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
+    background-size: cover;
 }
 
 .intro-content {

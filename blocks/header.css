@@ -37,6 +37,8 @@
     line-height: 20px;
     text-shadow: 0px 0px 16px #000000;
     margin: 0 0 2px 0;
+    color: white;
+    text-decoration: none;
 }
 
 .header-mail {
@@ -52,11 +54,11 @@
     margin-right: 116px;
 }
 
-.header-icon {
+.header-icon-link {
     margin-right: 5px;
 }
 
-.header-icon:last-child {
+.header-icon-link:last-child {
     margin-right: 0;
 }
 
@@ -70,18 +72,20 @@
     height: 20px;
 }
 
-.header-menu-item {
+.header-menu-link {
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
     margin: 0;
     margin-right: 30px;
+    color: white;
+    text-decoration: none;
 }
 
-.header-menu-item:last-child {
+.header-menu-link:last-child {
     margin-right: 0;
 }
 
-.header-menu-item:first-child {
+.header-menu-link:first-child {
     margin-right: 2px;
 }
