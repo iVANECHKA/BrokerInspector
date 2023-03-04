@@ -1,5 +1,132 @@
 .feed-content {
-    margin: 60px auto;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #152131;
     display: flex;
+    justify-content: center;
+}
+
+.feed-overlook {
+    background-color: #f2f2f2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feed-reviews {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feed-title {
+    margin: 60px 0 30px 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #152131;
+}
+
+.feed-arrows-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.feed-arrows {
+    display: flex;
+    flex-direction: column;
+    margin: 9.25px 27px 0 0;
+}
+
+.feed-arrows-review {
+    margin: 9.25px 0 0 27px;
+}
+
+.feed-arrow-up {
+    margin-bottom: 14px;
+}
+
+.feed-block {
+    width: 560px;
+    background-color: white;
+    box-shadow: 4px 4px 48px rgba(0, 0, 0, 0.12);
+    padding: 20px 15px;
+    margin-bottom: 30px;
+}
+
+.feed-block:last-child {
+    margin-bottom: 0;
+}
+
+.feed-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feed-block-title {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+}
+
+.feed-date {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.feed-block-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.8;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 10px 0 20px 0;
+}
+
+.feed-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-button {
+    text-decoration: none;
+    color: #152131;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.feed-like-number {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 0.7;
+    margin-right: 10px;
+}
+
+.feed-views-number {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 0.7;
+}
+
+.feed-show-all-link {
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #152131;
+    margin: 30px 0 60px 0;
 }
