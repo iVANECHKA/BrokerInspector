@@ -1,0 +1,43 @@
+.info {
+    padding: 80px 0;
+    color: #152131;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.info-wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.info-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    margin: 0 0 60px;
+}
+
+.info-block {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.info-block:last-child {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.info-content-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+}
+
+.info-text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    opacity: 0.8;
+    margin: 20px 40px 0 0;
+}
