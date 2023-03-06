@@ -17,6 +17,14 @@
     width: 232px;
     background-color: white;
     box-shadow: 4px 4px 48px rgba(0, 0, 0, 0.12);
+    margin-right: 15px;
+}
+
+.news-wrapper:last-child {
+    width: 232px;
+    background-color: white;
+    box-shadow: none;
+    margin-right: -6px;
 }
 
 
@@ -58,8 +66,9 @@
 /* Slider */
 
 .glider-contain {
-    width: 1208px;
+    width: 1220px;
     position: relative;
+    box-shadow: 4px 4px 48px rgba(0, 0, 0, 0.12);
 }
 
 .goForward {
