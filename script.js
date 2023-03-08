@@ -42,14 +42,22 @@ observer.observe(document.querySelector('.header-anchor'));
 
 // Slider for news
 
-window.addEventListener('load', function () {
-  new Glider(document.querySelector('.glider'), {
+// window.addEventListener('load', function () {
+//   new Glider(document.querySelector('.glider'), {
+//     slidesToShow: 5,
+//     slidesToScroll: 1,
+//     draggable: true,
+//     arrows: {
+//       prev: '.goBack',
+//       next: '.goForward'
+//     }
+//   })
+// })
+
+$(document).ready(function () {
+  $('.news-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
-    draggable: true,
-    arrows: {
-      prev: '.goBack',
-      next: '.goForward'
-    }
-  })
-})
+    autoplay: false,
+  });
+});
