@@ -62,7 +62,36 @@
 
 .news-slider {
     width: 1220px;
-    margin: 0 auto;
-    padding-bottom: 80px;
+    position: relative;
 }
+
+.previous-arrow {
+    background-image: url(../images/arrow-left.svg);
+    width: 25px;
+    height: 26px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    padding: 15px 15px;
+}
+
+.next-arrow {
+    background-image: url(../images/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 26px;
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 15px 15px;
+}
+
+.news-arrows-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
 
