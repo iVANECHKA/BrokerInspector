@@ -7,6 +7,8 @@ const observer = new IntersectionObserver(entries => {
     const headerNumber = document.querySelector('.header-number');
     const headerMail = document.querySelector('.header-mail');
     const headerMenuLinks = document.querySelectorAll('.header-menu-link');
+    const headerIcons = Array.from(document.querySelectorAll('.header-icon'));
+    
 
     if (entry.isIntersecting) {
       header.classList.remove('header-white');
@@ -16,10 +18,10 @@ const observer = new IntersectionObserver(entries => {
       headerMenuLinks.forEach((link) => {
         link.classList.remove('header-menu-link-white');
       });
-      document.querySelector('.header-viber').src = './images/viber.svg';
-      document.querySelector('.header-facebook').src = './images/facebook.svg';
-      document.querySelector('.header-vk').src = './images/vk.svg';
-      document.querySelector('.header-arrow').src = './images/arrow-down-white.svg';
+      document.querySelector('.header-viber').style.backgroundImage = 'url(../images/viber.svg)';
+      document.querySelector('.header-facebook').style.backgroundImage = 'url(../images/facebook.svg)';
+      document.querySelector('.header-vk').style.backgroundImage = 'url(../images/vk.svg)';
+
       return;
     }
 
@@ -31,10 +33,21 @@ const observer = new IntersectionObserver(entries => {
     headerMenuLinks.forEach((link) => {
       link.classList.add('header-menu-link-white');
     });
-    document.querySelector('.header-viber').src = './images/viber-dark.svg';
-    document.querySelector('.header-facebook').src = './images/facebook-dark.svg';
-    document.querySelector('.header-vk').src = './images/vk-dark.svg';
-    document.querySelector('.header-arrow').src = './images/arrow-down-header-black.svg';
+    document.querySelector('.header-viber').style.backgroundImage = 'url(../images/viber-dark.svg)';
+    document.querySelector('.header-facebook').style.backgroundImage = 'url(../images/facebook-dark.svg)';
+    document.querySelector('.header-vk').style.backgroundImage = 'url(../images/vk-dark.svg)';
+    headerIcons.forEach((icon) => {
+      if (icon.classList.contains('header-viber')) {
+
+        icon.addEventListener('mouseenter', () => {
+          icon.classList.add('header-viber-white-hover');
+        }) 
+        icon.addEventListener('mouseleave', () => {
+          icon.classList.remove('header-viber-white-hover');
+        })
+
+      } else return;
+    })
   });
 });
 
@@ -93,3 +106,22 @@ blocks.forEach((block) => {
     block.querySelector('.info-faq-img').classList.toggle('trans-active');
   })
 })
+
+$(function(){
+
+  $('.link-faq').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#faq').offset().top }, 1000);
+    e.preventDefault();
+  });
+  
+  });
+
+  $(function(){
+
+    $('.link-info').on('click', function(e){
+      $('html,body').stop().animate({ scrollTop: $('#info').offset().top }, 1000);
+      e.preventDefault();
+    });
+    
+    });
+

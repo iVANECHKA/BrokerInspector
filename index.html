@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="./glider/glider.css"> -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./index.css">
     <title>Главная</title>
@@ -15,26 +14,23 @@
     <div class="header-anchor"></div>
     <header class="header">
         <div class="header-wrapper">
-            <p class="header-logo">Брокер Инспектор</p>
+            <a href="#" style="color: white; text-decoration: none;"><p class="header-logo">Брокер Инспектор</p></a>
             <div class="header-info">
                 <a class="header-number" href="tel: 8800XXXXXXX">8 (800) XXX-XX-XX</a>
                 <p class="header-mail">broker@info.com</p>
             </div>
             <div class="header-social">
-                <a href="#" class="header-icon-link"><img src="./images/viber.svg" alt="Вайбер"
-                        class="header-icon header-viber"></a>
-                <a href="#" class="header-icon-link"><img src="./images/facebook.svg" alt="Фейсбук"
-                        class="header-icon header-facebook"></a>
-                <a href="#" class="header-icon-link"><img src="./images/vk.svg" alt="Вконтакте"
-                        class="header-icon header-vk"></a>
+                <a href="#" class="header-icon-link"><div alt="Вайбер" class="header-icon header-viber"></div></a>
+                <a href="#" class="header-icon-link"><div alt="Фейсбук" class="header-icon header-facebook"></div></a>
+                <a href="#" class="header-icon-link"><div alt="Вконтакте" class="header-icon header-vk"></div></a>
             </div>
             <nav class="header-menu">
-                <a href="#" class="header-menu-link">Белые брокеры</a>
-                <a href="#" class="header-menu-link">Чёрный список</a>
-                <a href="#" class="header-menu-link">Обзоры</a>
-                <a href="#" class="header-menu-link">Отзывы</a>
-                <a href="#" class="header-menu-link">FAQ</a>
-                <a href="#" class="header-menu-link">О нас</a>
+                <a href="./company-page.html" class="header-menu-link">Белые брокеры</a>
+                <a href="./brokers.html" class="header-menu-link">Чёрный список</a>
+                <a href="./catalog.html" class="header-menu-link">Обзоры</a>
+                <a href="./catalog.html" class="header-menu-link">Отзывы</a>
+                <a href="#faq" class="header-menu-link link-faq">FAQ</a>
+                <a href="#info" class="header-menu-link link-info">О нас</a>
             </nav>
         </div>
     </header>
@@ -372,7 +368,7 @@
                             <div class="feed-arrow-down-review"></div>
                         </div>
                     </div>
-                    <a href="#" class="feed-show-all-link">Все отзывы</a>
+                    <a href="#" class="feed-show-all-link" id="info">Все отзывы</a>
                 </div>
             </div>
         </section>
@@ -442,7 +438,7 @@
                 </div>
 
                 <div class="info-block">
-                    <img src="./images/crypto.png" alt="" class="info-image">
+                    <img src="./images/crypto.png" alt="" class="info-image" id="faq">
                     <article class="info-content">
                         <h3 class="info-content-title info-content-title-right">Крипто-диспуты</h3>
                         <p class="info-text info-text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -653,14 +649,14 @@
     <footer class="footer">
         <div class="footer-wrapper">
             <div class="footer-left-wrapper">
-                <p class="footer-logo">Брокер Инспектор</p>
+                <p class="footer-logo"><a href="#" style="color: white; text-decoration:none;">Брокер Инспектор</a></p>
                 <a href="tel: 8800XXXXXXX" class="footer-number">8 (800) XXX-XX-XX</a>
                 <p class="footer-mail">broker@info.com</p>
                 <p class="footer-address">Москва, Смоленский переулок 14, оф. 234а</p>
                 <div class="footer-social-icons">
-                    <img src="./images/viber-dark.svg" alt="" class="footer-social-icon">
-                    <img src="./images/facebook-dark.svg" alt="" class="footer-social-icon">
-                    <img src="./images/vk-dark.svg" alt="" class="footer-social-icon">
+                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-viber"></div></a>
+                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-facebook"></div></a>
+                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-vk"></div></a>
                 </div>
             </div>
             <div class="footer-right-wrapper">
@@ -681,7 +677,6 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- <script src="./glider/glider.js"></script> -->
     <script src="./index.js"></script>
 </body>
 

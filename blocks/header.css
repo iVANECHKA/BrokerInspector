@@ -53,10 +53,12 @@ body {
     width: 127px;
     text-shadow: 0px 0px 16px #000000;
     margin: 0 60px 0 0;
+    cursor: pointer;
 }
 
 .header-logo-white {
     text-shadow: none;
+    color: #152131;
 }
 
 .header-info {
@@ -71,6 +73,11 @@ body {
     margin: 0 0 2px 0;
     color: white;
     text-decoration: none;
+    transition: .2s ease;
+}
+
+.header-number:hover {
+    opacity: .7;
 }
 
 .header-number-white {
@@ -95,10 +102,51 @@ body {
 
 .header-social {
     margin-right: 116px;
+    display: flex;
+}
+
+.header-icon {
+    width: 25px;
+    height: 26px;
+}
+
+.header-viber {
+    background-image: url(../images/viber.svg);
+    transition: .2s ease;
+}
+
+.header-viber:hover {
+    opacity: .7;
+    width: 25px;
+    height: 25px;
+}
+
+
+.header-facebook {
+    background-image: url(../images/facebook.svg);
+    transition: .2s ease;
+}
+
+.header-facebook:hover {
+    opacity: .7;
+    width: 25px;
+    height: 25px;
+}
+
+
+.header-vk {
+    background-image: url(../images/vk.svg);
+    transition: .2s ease;
+}
+
+.header-vk:hover {
+    opacity: .7;
+    width: 25px;
+    height: 25px;
 }
 
 .header-icon-link {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .header-icon-link:last-child {
@@ -123,6 +171,11 @@ body {
     margin-right: 30px;
     color: white;
     text-decoration: none;
+    transition: .2s ease;
+}
+
+.header-menu-link:hover {
+    opacity: .7;
 }
 
 .header-menu-link-white {
@@ -133,9 +186,7 @@ body {
     margin-right: 0;
 }
 
-.header-menu-link:first-child {
-    margin-right: 2px;
-}
+
 
 @media (max-width: 900px) {
     .header {
