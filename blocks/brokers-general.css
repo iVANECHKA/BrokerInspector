@@ -27,7 +27,7 @@
 
 .broker-list-block {
     background-color: white;
-    box-shadow: 4px 4px 48px rgba(0, 0, 0, 0.12);
+    /* box-shadow: 4px 4px 48px rgba(0, 0, 0, 0.12); */
     width: 770px;
     margin-bottom: 30px;
     padding: 20px 15px;
@@ -148,5 +148,23 @@
 }
 
 .brokers-arrow-up {
-    margin-bottom: 18.5px;
+    background-image: url(../images/arrow-up.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.brokers-arrow-down {
+    background-image: url(../images/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.broker-slider {
+    width: 800px;
 }
