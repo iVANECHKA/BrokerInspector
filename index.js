@@ -40,7 +40,7 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('.header-anchor'));
 
-// Slider for news
+
 
 $(document).ready(function () {
   $('.news-slider').slick({
@@ -50,6 +50,7 @@ $(document).ready(function () {
     prevArrow: document.querySelector('.previous-arrow'),
     nextArrow: document.querySelector('.next-arrow')
   });
+
 
   $('.review-slider').slick({
     slidesToShow: 3,
@@ -70,4 +71,25 @@ $(document).ready(function () {
     prevArrow: document.querySelector('.feed-arrow-up-overlook'),
     nextArrow: document.querySelector('.feed-arrow-down-overlook')
   });
+
+  $('.info-faq > div > .info-answer').hide();
+
+  $('.info-faq > div').click(function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active").find(".info-answer").slideUp();
+    } else {
+      $(".info-faq > div.active .info-answer").slideUp();
+      $(".info-faq > div.active").removeClass("active");
+      $(this).addClass("active").find(".info-answer").slideDown();
+    }
+    return false;
+  });
 });
+
+const blocks = Array.from(document.querySelectorAll('.info-faq-block'));
+
+blocks.forEach((block) => {
+  block.addEventListener('click', () => {
+    block.querySelector('.info-faq-img').classList.toggle('trans-active');
+  })
+})
