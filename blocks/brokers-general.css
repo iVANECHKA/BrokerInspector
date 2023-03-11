@@ -1,0 +1,152 @@
+.brokers-general {
+    display: flex;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #152131;
+    margin-bottom: 100px;
+}
+
+.brokers-list {
+    background-color: #f2f2f2;
+    display: flex;
+    width: 60.94%;
+    justify-content: flex-end;
+    padding: 0 0 60px;
+}
+
+.broker-list-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: left;
+    margin: 60px 0 30px;
+}
+
+.markup {
+    color: #ff922e;
+}
+
+.broker-list-block {
+    background-color: white;
+    box-shadow: 4px 4px 48px rgba(0, 0, 0, 0.12);
+    width: 770px;
+    margin-bottom: 30px;
+    padding: 20px 15px;
+}
+
+.broker-list-block:last-child {
+    margin-bottom: 0;
+}
+
+.brokers-list-wrapper-for-title {
+    margin-right: 20px;
+}
+
+.broker-list-block-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: .8;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 10px 0 20px;
+}
+
+.broker-list-block-title {
+    margin: 20px 0 0;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.broker-list-block-link {
+    color: #152131;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.broker-aside {
+    margin-left: 20px;
+}
+
+.brokers-help {
+    background-color: white;
+    box-shadow: 4px 4px 48px rgba(0, 0, 0, 0.12);
+    width: 350px;
+    padding: 20px 15px;
+    margin-bottom: 30px;
+}
+
+.brokers-help-title {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0 0 10px;
+}
+
+.brokers-help-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+    background-color: #152131;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.brokers-help-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: .8;
+}
+
+.brokers-victim {
+    background-color: #152131;
+    color: white;
+    padding: 20px 15px;
+    width: 350px;
+    box-shadow: 4px 4px 48px rgba(0, 0, 0, 0.12);
+}
+
+.brokers-victim-title {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.brokers-victim-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.8;
+    margin: 0 0 20px;
+    width: 350px;
+}
+
+.brokers-victim-link {
+    color: #152131;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    padding: 20px 40px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.brokers-arrows {
+    display: flex;
+    flex-direction: column;
+    margin: 128.24px 27px 0 0;
+}
+
+.brokers-arrow-up {
+    margin-bottom: 18.5px;
+}
