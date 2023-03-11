@@ -21,6 +21,22 @@
     margin: 0;
 }
 
+@media (max-width: 900px) {
+    .intro-title {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .intro {
+        max-width: 390px;
+    }
+
+    .intro-content {
+        max-width: 360px;
+        padding: 123px 15px 40px;
+    }
+}
+
 .intro-list {
     margin: 50px 0 120px 0;
 }

@@ -2,6 +2,8 @@ body {
     background-color: #fbfbfb;
 }
 
+
+
 .header {
     position: fixed;
     color: white;
@@ -135,3 +137,25 @@ body {
     margin-right: 2px;
 }
 
+@media (max-width: 900px) {
+    .header {
+        width: 360px;
+        margin-left: -180px;
+    }
+
+    .header-logo {
+        margin: 0;
+    }
+
+    .header-info {
+        display: none;
+    }
+
+    .header-social {
+        display: none;
+    }
+
+    .header-menu {
+        display: none;
+    }
+}
