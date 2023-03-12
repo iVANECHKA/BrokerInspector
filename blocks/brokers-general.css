@@ -97,6 +97,11 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center;
+    transition: .2s ease;
+}
+
+.brokers-help-link:hover {
+    opacity: .9;
 }
 
 .brokers-help-text {
@@ -139,6 +144,11 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
+    transition: .2s ease;
+}
+
+.brokers-victim-link:hover {
+    opacity: .8;
 }
 
 .brokers-arrows {

@@ -82,6 +82,11 @@
     padding: 20px 40px;
     position: relative;
     z-index: 10;
+    transition: .2s ease;
+}
+
+.intro-ad-button:hover {
+    opacity: .8;
 }
 
 

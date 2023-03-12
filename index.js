@@ -98,12 +98,19 @@ $(document).ready(function () {
     return false;
   });
 });
-
+const blockElement = document.querySelector('.info-faq-block');
 const blocks = Array.from(document.querySelectorAll('.info-faq-block'));
+const faqArrows = Array.from(document.querySelectorAll('.info-faq-img'));
 
 blocks.forEach((block) => {
-  block.addEventListener('click', () => {
-    block.querySelector('.info-faq-img').classList.toggle('trans-active');
+  block.addEventListener('click', (evt) => {
+    // if ((!evt.target.classList.contains('trans-active')) && faqArrows.some(e => e.classList.contains('trans-active'))) {
+    //   faqArrows.forEach((arrow) => {
+    //     arrow.classList.toggle('trans-active');
+    //   })
+    // } else {
+      block.querySelector('.info-faq-img').classList.toggle('trans-active');
+    // }
   })
 })
 
@@ -125,3 +132,8 @@ $(function(){
     
     });
 
+
+
+    window.addEventListener('click', (e) => {
+      console.log(e.target);
+    }); 

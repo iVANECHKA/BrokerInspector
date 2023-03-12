@@ -222,6 +222,11 @@
     line-height: 22px;
     white-space: nowrap;
     margin-right: 40px;
+    transition: .2s ease;
+}
+
+.feed-button-black:hover {
+    opacity: .9;
 }
 
 .feed-button-white {
@@ -236,6 +241,12 @@
     font-size: 18px;
     line-height: 22px;
     white-space: nowrap;
+    transition: .2s ease;
+}
+
+.feed-button-white:hover {
+    /* background-color: #f8f8f7; */
+    opacity: .7;
 }
 
 .feed-subtitle {

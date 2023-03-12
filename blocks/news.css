@@ -54,6 +54,11 @@
     line-height: 17px;
     text-decoration: none;
     color: #152131;
+    transition: .2s ease;
+}
+
+.news-block-link:hover {
+    opacity: 0.8;
 }
 
 
