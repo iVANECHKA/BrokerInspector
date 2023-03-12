@@ -14,15 +14,23 @@
     <div class="header-anchor"></div>
     <header class="header">
         <div class="header-wrapper">
-            <a href="#" style="color: white; text-decoration: none;"><p class="header-logo">Брокер Инспектор</p></a>
+            <a href="#" style="color: white; text-decoration: none;">
+                <p class="header-logo">Брокер Инспектор</p>
+            </a>
             <div class="header-info">
                 <a class="header-number" href="tel: 8800XXXXXXX">8 (800) XXX-XX-XX</a>
                 <p class="header-mail">broker@info.com</p>
             </div>
             <div class="header-social">
-                <a href="#" class="header-icon-link"><div alt="Вайбер" class="header-icon header-viber"></div></a>
-                <a href="#" class="header-icon-link"><div alt="Фейсбук" class="header-icon header-facebook"></div></a>
-                <a href="#" class="header-icon-link"><div alt="Вконтакте" class="header-icon header-vk"></div></a>
+                <a href="#" class="header-icon-link">
+                    <div alt="Вайбер" class="header-icon header-viber"></div>
+                </a>
+                <a href="#" class="header-icon-link">
+                    <div alt="Фейсбук" class="header-icon header-facebook"></div>
+                </a>
+                <a href="#" class="header-icon-link">
+                    <div alt="Вконтакте" class="header-icon header-vk"></div>
+                </a>
             </div>
             <nav class="header-menu">
                 <a href="./company-page.html" class="header-menu-link">Белые брокеры</a>
@@ -654,9 +662,15 @@
                 <p class="footer-mail">broker@info.com</p>
                 <p class="footer-address">Москва, Смоленский переулок 14, оф. 234а</p>
                 <div class="footer-social-icons">
-                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-viber"></div></a>
-                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-facebook"></div></a>
-                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-vk"></div></a>
+                    <a href="#" class="footer-social-link">
+                        <div class="footer-social-icon footer-viber"></div>
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <div class="footer-social-icon footer-facebook"></div>
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <div class="footer-social-icon footer-vk"></div>
+                    </a>
                 </div>
             </div>
             <div class="footer-right-wrapper">
@@ -674,6 +688,62 @@
             </div>
         </div>
     </footer>
+
+
+    <div class="review-popup">
+        <div class="popup">
+            <div class="popup-header">
+                <h4 class="popup-title">Жалоба/Отзыв</h4>
+                <div class="popup-close-btn"></div>
+            </div>
+
+            <div class="popup-content">
+                <form name="review-form" novalidate>
+                    <p class="popup-label">Ваше имя</p>
+                    <input type="text" class="popup-input" name="name" placeholder="Не указано">
+                    <p class="popup-label">Номер телефона</p>
+                    <input type="tel" name="phone" class="popup-input">
+                    <p class="popup-label">E-Mail</p>
+                    <input type="email" class="popup-input" name="email" placeholder="Не указан">
+                    <p class="popup-label">Выберите компанию</p>
+                    <div class="select_wrap">
+                        <ul class="default_option">
+                            <li>
+                                <div class="option pizza">
+                                    <p class="option-text">ООО “Белый брокер”</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul">
+                            <li>
+                                <div class="option pizza">
+                                    <p class="option-text">ООО “Белый брокер”</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option burger">
+                                    <p class="option-text">ООО “Чёрный брокер”</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option ice">
+                                    <p class="option-text">ООО “Синий брокер”</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option fries">
+                                    <p class="option-text">ООО “Голубой брокер”</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="popup-label">Отзыв</p>
+                    <textarea class="popup-input review-input" placeholder="Текст отзыва"></textarea>
+                    <button class="popup-button">Оставить отзыв</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

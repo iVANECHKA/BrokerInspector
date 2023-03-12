@@ -1,4 +1,4 @@
-// 2 states for header
+// 2 состояния для шапки
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -8,7 +8,7 @@ const observer = new IntersectionObserver(entries => {
     const headerMail = document.querySelector('.header-mail');
     const headerMenuLinks = document.querySelectorAll('.header-menu-link');
     const headerIcons = Array.from(document.querySelectorAll('.header-icon'));
-    
+
 
     if (entry.isIntersecting) {
       header.classList.remove('header-white');
@@ -41,7 +41,7 @@ const observer = new IntersectionObserver(entries => {
 
         icon.addEventListener('mouseenter', () => {
           icon.classList.add('header-viber-white-hover');
-        }) 
+        })
         icon.addEventListener('mouseleave', () => {
           icon.classList.remove('header-viber-white-hover');
         })
@@ -53,7 +53,7 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('.header-anchor'));
 
-
+// Слайдеры
 
 $(document).ready(function () {
   $('.news-slider').slick({
@@ -85,6 +85,8 @@ $(document).ready(function () {
     nextArrow: document.querySelector('.feed-arrow-down-overlook')
   });
 
+  // Аккордион
+
   $('.info-faq > div > .info-answer').hide();
 
   $('.info-faq > div').click(function () {
@@ -98,42 +100,73 @@ $(document).ready(function () {
     return false;
   });
 });
-const blockElement = document.querySelector('.info-faq-block');
-const blocks = Array.from(document.querySelectorAll('.info-faq-block'));
-const faqArrows = Array.from(document.querySelectorAll('.info-faq-img'));
 
-blocks.forEach((block) => {
-  block.addEventListener('click', (evt) => {
-    // if ((!evt.target.classList.contains('trans-active')) && faqArrows.some(e => e.classList.contains('trans-active'))) {
-    //   faqArrows.forEach((arrow) => {
-    //     arrow.classList.toggle('trans-active');
-    //   })
-    // } else {
-      block.querySelector('.info-faq-img').classList.toggle('trans-active');
-    // }
-  })
-})
 
-$(function(){
+// const blockElement = document.querySelector('.info-faq-block');
+// const blocks = Array.from(document.querySelectorAll('.info-faq-block'));
+// const faqArrows = Array.from(document.querySelectorAll('.info-faq-img'));
 
-  $('.link-faq').on('click', function(e){
+// blocks.forEach((block) => {
+//   block.addEventListener('click', (evt) => {
+//     // if ((!evt.target.classList.contains('trans-active')) && faqArrows.some(e => e.classList.contains('trans-active'))) {
+//     //   faqArrows.forEach((arrow) => {
+//     //     arrow.classList.toggle('trans-active');
+//     //   })
+//     // } else {
+//       block.querySelector('.info-faq-img').classList.toggle('trans-active');
+//     // }
+//   })
+// })
+
+
+
+// Плавный переход по якорю
+
+$(function () {
+
+  $('.link-faq').on('click', function (e) {
     $('html,body').stop().animate({ scrollTop: $('#faq').offset().top }, 1000);
     e.preventDefault();
   });
-  
+
+});
+
+$(function () {
+
+  $('.link-info').on('click', function (e) {
+    $('html,body').stop().animate({ scrollTop: $('#info').offset().top }, 1000);
+    e.preventDefault();
   });
 
-  $(function(){
-
-    $('.link-info').on('click', function(e){
-      $('html,body').stop().animate({ scrollTop: $('#info').offset().top }, 1000);
-      e.preventDefault();
-    });
-    
-    });
+});
 
 
+// Селектор из попапа
 
-    window.addEventListener('click', (e) => {
-      console.log(e.target);
-    }); 
+$(".default_option").click(function () {
+  $(this).parent().toggleClass("active");
+});
+
+$(".select_ul li").click(function () {
+  var currentele = $(this).html();
+  $(".default_option li").html(currentele);
+  $(this).parents(".select_wrap").removeClass("active");
+});
+
+
+// Открытие/Закрытие попапа
+
+function openPopup (popup) {
+  popup.fadeIn(300);
+}
+
+function closePopup (popup) {
+  popup.classList.remove('popup-active');
+}
+
+
+// Слушатели
+
+$('.intro-button').click(() => {
+  openPopup($('.review-popup'))
+});
