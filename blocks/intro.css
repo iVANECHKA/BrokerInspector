@@ -80,6 +80,7 @@
     color: #152131;
     margin-right: 15px;
     transition: .2s ease;
+    cursor: pointer;
 }
 
 .intro-button:hover {

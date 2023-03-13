@@ -1,4 +1,4 @@
-.review-popup {
+.popup-bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,9 +9,6 @@
     display: none;
 }
 
-.popup-active {
-    display: block;
-}
 
 .popup {
     position: absolute;
@@ -43,6 +40,7 @@
     background-image: url(../images/close-btn.svg);
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .popup-content {
@@ -82,6 +80,10 @@
     line-height: 22px;
     padding: 20px 96px;
     cursor: pointer;
+}
+
+.popup-button-consult {
+    padding: 20px 53.5px;
 }
 
 /* .popup-select {

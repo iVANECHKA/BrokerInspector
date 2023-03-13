@@ -153,6 +153,11 @@ $(".select_ul li").click(function () {
   $(this).parents(".select_wrap").removeClass("active");
 });
 
+// Маска для ввода номера телефона
+
+$.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]"
+$(".tel-input").mask("+7 (h99) 999-99-99");
+
 
 // Открытие/Закрытие попапа
 
@@ -161,7 +166,7 @@ function openPopup (popup) {
 }
 
 function closePopup (popup) {
-  popup.classList.remove('popup-active');
+  popup.fadeOut(300);
 }
 
 
@@ -169,4 +174,8 @@ function closePopup (popup) {
 
 $('.intro-button').click(() => {
   openPopup($('.review-popup'))
+});
+
+$('.popup-close-btn').click(() => {
+  closePopup($('.popup-bg'))
 });

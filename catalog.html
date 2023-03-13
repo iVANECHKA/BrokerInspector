@@ -288,10 +288,66 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup-bg consult-popup popup-active">
+        <div class="popup">
+            <div class="popup-header">
+                <h4 class="popup-title">Получить консультацию</h4>
+                <div class="popup-close-btn"></div>
+            </div>
+
+            <div class="popup-content">
+                <form name="review-form" novalidate>
+                    <p class="popup-label">Ваше имя</p>
+                    <input type="text" class="popup-input" name="name" placeholder="Не указано">
+                    <p class="popup-label">Номер телефона</p>
+                    <input type="tel" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__">
+                    <p class="popup-label">E-Mail</p>
+                    <input type="email" class="popup-input" name="email" placeholder="Не указан">
+                    <p class="popup-label">Сфера деятельности</p>
+                    <div class="select_wrap">
+                        <ul class="default_option">
+                            <li>
+                                <div class="option pizza">
+                                    <p class="option-text">Брокер</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul">
+                            <li>
+                                <div class="option pizza">
+                                    <p class="option-text">Брокер</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option burger">
+                                    <p class="option-text">Не брокер</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option ice">
+                                    <p class="option-text">Вообще не брокер</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option fries">
+                                    <p class="option-text">Совсем не брокер</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="popup-label">Опыт в инвестициях, кратко</p>
+                    <textarea class="popup-input review-input" placeholder="Не указано"></textarea>
+                    <button class="popup-button popup-button-consult">Получить консультацию</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- <script src="./glider/glider.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="./catalog.js"></script>
 </body>
 
