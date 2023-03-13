@@ -457,13 +457,16 @@
             </div>
 
             <div class="popup-content">
-                <form name="review-form">
+                <form name="refund-form" class="popup-form">
                     <p class="popup-label">Ваше имя</p>
-                    <input type="text" class="popup-input" name="name" placeholder="Не указано" minlength="2" required>
+                    <input type="text" id="refund-name-input" class="popup-input" name="name" placeholder="Не указано" minlength="2" required>
+                    <span class="popup-input-error refund-name-input-error"></span>
                     <p class="popup-label">Номер телефона</p>
-                    <input type="tel" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__" required>
+                    <input type="tel" id="refund-tel-input" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__" required>
+                    <span class="popup-input-error refund-tel-input-error"></span>
                     <p class="popup-label">E-Mail</p>
-                    <input type="email" class="popup-input refund-email" name="email" placeholder="Не указан">
+                    <input type="email" id="refund-email-input" class="popup-input refund-email" name="email" placeholder="Не указан">
+                    <span class="popup-input-error refund-email-input-error"></span>
                     <p class="popup-label">Название компании</p>
                     <div class="select_wrap">
                         <ul class="default_option refund-default_option">
@@ -510,13 +513,16 @@
             </div>
 
             <div class="popup-content">
-                <form name="review-form">
+                <form name="review-form" class="popup-form">
                     <p class="popup-label popup-questions-label">1. Какую сумму вы инвестировали?</p>
-                    <input type="text" class="popup-input" name="sum" placeholder="Не указано">
+                    <input type="text" id="question-sum-input" class="popup-input" name="sum" placeholder="Не указано" minlength="3" required>
+                    <span class="popup-input-error question-sum-input-error"></span>
                     <p class="popup-label popup-questions-label">2. Когда вы инвестировали?</p>
-                    <input type="text" name="when" class="popup-input" placeholder="Не указано">
+                    <input type="text" id="question-when-input" name="when" class="popup-input" placeholder="Не указано" minlength="3" required>
+                    <span class="popup-input-error question-when-input-error"></span>
                     <p class="popup-label popup-questions-label">3. Почему вы выбрали именно этого брокера?</p>
-                    <textarea class="popup-input popup-questions-textarea" name="why" placeholder="Не указано"></textarea>
+                    <textarea class="popup-input popup-questions-textarea" id="question-why-input" name="why" placeholder="Не указано" minlength="3" required></textarea>
+                    <span class="popup-input-error question-why-input-error"></span>
                     <button class="popup-button questions-button">Запросить возврат</button>
                 </form>
             </div>
@@ -531,13 +537,16 @@
             </div>
 
             <div class="popup-content">
-                <form name="review-form">
+                <form name="review-form" class="popup-form">
                     <p class="popup-label">Ваше имя</p>
-                    <input type="text" class="popup-input" name="name" placeholder="Не указано" minlength="2" required>
+                    <input type="text" id="name-input" class="popup-input" name="name" placeholder="Не указано" minlength="2" required>
+                    <span class="popup-input-error name-input-error"></span>
                     <p class="popup-label">Номер телефона</p>
-                    <input type="tel" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__" required>
+                    <input type="tel" id="tel-input" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__" required>
+                    <span class="popup-input-error tel-input-error"></span>
                     <p class="popup-label">E-Mail</p>
-                    <input type="email" class="popup-input" name="email" placeholder="Не указан">
+                    <input type="email" id="email-input" class="popup-input" name="email" placeholder="Не указан">
+                    <span class="popup-input-error email-input-error"></span>
                     <p class="popup-label">Выберите компанию</p>
                     <div class="select_wrap">
                         <ul class="default_option">
@@ -571,7 +580,8 @@
                         </ul>
                     </div>
                     <p class="popup-label">Отзыв</p>
-                    <textarea class="popup-input review-input" placeholder="Текст отзыва" required></textarea>
+                    <textarea class="popup-input review-input" id="text-input" placeholder="Текст отзыва" required></textarea>
+                    <span class="popup-input-error text-input-error"></span>
                     <button class="popup-button review-button">Оставить отзыв</button>
                 </form>
             </div>
