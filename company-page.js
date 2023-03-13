@@ -30,3 +30,50 @@ specDivides.forEach((divide) => {
 })
 
 
+
+// Маска для ввода номера телефона
+
+$.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]"
+$(".tel-input").mask("+7 (h99) 999-99-99");
+
+
+// Открытие/Закрытие попапа
+
+function openPopup (popup) {
+  popup.fadeIn(300);
+}
+
+function closePopup (popup) {
+  popup.fadeOut(300);
+}
+
+
+// Слушатели
+
+$('.feed-button-black').click(() => {
+  openPopup($('.refund-popup'))
+});
+
+$('.feed-button-white').click(() => {
+  openPopup($('.review-popup'))
+});
+
+$('.refund-button').click((e) => {
+  e.preventDefault();
+  closePopup($('.refund-popup'))
+  openPopup($('.questions-popup'))
+});
+
+$('.questions-button').click((e) => {
+  e.preventDefault();
+});
+
+$('.review-button').click((e) => {
+  e.preventDefault();
+});
+
+$('.popup-close-btn').click(() => {
+  closePopup($('.popup-bg'))
+});
+
+
