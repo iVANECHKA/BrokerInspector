@@ -18,9 +18,9 @@ const observer = new IntersectionObserver(entries => {
       headerMenuLinks.forEach((link) => {
         link.classList.remove('header-menu-link-white');
       });
-      document.querySelector('.header-viber').style.backgroundImage = 'url(../images/viber.svg)';
-      document.querySelector('.header-facebook').style.backgroundImage = 'url(../images/facebook.svg)';
-      document.querySelector('.header-vk').style.backgroundImage = 'url(../images/vk.svg)';
+      document.querySelector('.header-viber').style.backgroundImage = 'url(./images/viber.svg)';
+      document.querySelector('.header-facebook').style.backgroundImage = 'url(./images/facebook.svg)';
+      document.querySelector('.header-vk').style.backgroundImage = 'url(./images/vk.svg)';
 
       return;
     }
@@ -33,9 +33,9 @@ const observer = new IntersectionObserver(entries => {
     headerMenuLinks.forEach((link) => {
       link.classList.add('header-menu-link-white');
     });
-    document.querySelector('.header-viber').style.backgroundImage = 'url(../images/viber-dark.svg)';
-    document.querySelector('.header-facebook').style.backgroundImage = 'url(../images/facebook-dark.svg)';
-    document.querySelector('.header-vk').style.backgroundImage = 'url(../images/vk-dark.svg)';
+    document.querySelector('.header-viber').style.backgroundImage = 'url(./images/viber-dark.svg)';
+    document.querySelector('.header-facebook').style.backgroundImage = 'url(./images/facebook-dark.svg)';
+    document.querySelector('.header-vk').style.backgroundImage = 'url(./images/vk-dark.svg)';
     headerIcons.forEach((icon) => {
       if (icon.classList.contains('header-viber')) {
 
