@@ -47,3 +47,7 @@ $('.intro-ad-button').click(() => {
 $('.popup-close-btn').click(() => {
   closePopup($('.popup-bg'))
 });
+
+$('.consult-button').click((e) => {
+  e.preventDefault()
+});

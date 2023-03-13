@@ -698,11 +698,11 @@
             </div>
 
             <div class="popup-content">
-                <form name="review-form" novalidate>
+                <form name="review-form">
                     <p class="popup-label">Ваше имя</p>
-                    <input type="text" class="popup-input" name="name" placeholder="Не указано">
+                    <input type="text" class="popup-input" name="name" placeholder="Не указано" minlength="2" required>
                     <p class="popup-label">Номер телефона</p>
-                    <input type="tel" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__">
+                    <input type="tel" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__" required>
                     <p class="popup-label">E-Mail</p>
                     <input type="email" class="popup-input" name="email" placeholder="Не указан">
                     <p class="popup-label">Выберите компанию</p>
@@ -738,7 +738,7 @@
                         </ul>
                     </div>
                     <p class="popup-label">Отзыв</p>
-                    <textarea class="popup-input review-input" placeholder="Текст отзыва"></textarea>
+                    <textarea class="popup-input review-input" placeholder="Текст отзыва" required></textarea>
                     <button class="popup-button review-button">Оставить отзыв</button>
                 </form>
             </div>

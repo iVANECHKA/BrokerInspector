@@ -179,3 +179,7 @@ $('.intro-button').click(() => {
 $('.popup-close-btn').click(() => {
   closePopup($('.popup-bg'))
 });
+
+$('.review-button').click((e) => {
+  e.preventDefault();
+});
