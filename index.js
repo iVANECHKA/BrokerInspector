@@ -85,7 +85,7 @@ $(document).ready(function () {
     nextArrow: document.querySelector('.feed-arrow-down-overlook')
   });
 
-  // Аккордион
+  // аккордеон
 
   $('.info-faq > div > .info-answer').hide();
 
@@ -101,22 +101,28 @@ $(document).ready(function () {
   });
 });
 
+// Грамотная анимация стрелок для аккордеона
 
-// const blockElement = document.querySelector('.info-faq-block');
-// const blocks = Array.from(document.querySelectorAll('.info-faq-block'));
-// const faqArrows = Array.from(document.querySelectorAll('.info-faq-img'));
+const blocks = Array.from(document.querySelectorAll('.info-faq-block'));
 
-// blocks.forEach((block) => {
-//   block.addEventListener('click', (evt) => {
-//     // if ((!evt.target.classList.contains('trans-active')) && faqArrows.some(e => e.classList.contains('trans-active'))) {
-//     //   faqArrows.forEach((arrow) => {
-//     //     arrow.classList.toggle('trans-active');
-//     //   })
-//     // } else {
-//       block.querySelector('.info-faq-img').classList.toggle('trans-active');
-//     // }
-//   })
-// })
+
+blocks.forEach((block) => {
+
+  block.addEventListener('click', () => {
+
+    if (document.querySelector('.trans-active') && !block.querySelector('.trans-active')) {
+
+      document.querySelector('.trans-active').classList.toggle('trans-active');
+      block.querySelector('.info-faq-img').classList.toggle('trans-active');
+
+    } else {
+
+      block.querySelector('.info-faq-img').classList.toggle('trans-active');
+    }
+})
+
+})
+
 
 
 
@@ -161,11 +167,11 @@ $(".tel-input").mask("+7 (h99) 999-99-99");
 
 // Открытие/Закрытие попапа
 
-function openPopup (popup) {
+function openPopup(popup) {
   popup.fadeIn(300);
 }
 
-function closePopup (popup) {
+function closePopup(popup) {
   popup.fadeOut(300);
 }
 
@@ -217,8 +223,8 @@ const hideInputError = (formElement, inputElement, validationSettings) => {
 
 const hasInvalidInput = (inputList) => {
   return inputList.some((inputElement) => {
-  return !inputElement.validity.valid;
-}); 
+    return !inputElement.validity.valid;
+  });
 }
 
 const toggleButtonState = (inputList, buttonElement, validationSettings) => {
@@ -244,9 +250,9 @@ const setEventListeners = (formElement, validationSettings) => {
     setTimeout(() => {
       toggleButtonState(inputList, buttonElement, validationSettings);
     }, 0);
-    
+
   });
-  
+
   inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', function () {
       checkInputValidity(formElement, inputElement, validationSettings);
@@ -255,14 +261,14 @@ const setEventListeners = (formElement, validationSettings) => {
   });
 };
 
-  const enableValidation = (validationSettings) => {
+const enableValidation = (validationSettings) => {
   const formList = Array.from(document.querySelectorAll(validationSettings.popupForm));
   formList.forEach((formElement) => {
 
     formList.forEach(formElement => {
       setEventListeners(formElement, validationSettings);
     })
-    
+
   });
 };
 
