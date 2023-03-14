@@ -64,44 +64,51 @@ $(document).ready(function () {
     nextArrow: document.querySelector('.next-arrow')
   });
 
-
+  if ($(window).width() > 900) {
   $('.review-slider').slick({
+
+    
     slidesToShow: 3,
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
     autoplay: false,
     prevArrow: document.querySelector('.feed-arrow-up-review'),
-    nextArrow: document.querySelector('.feed-arrow-down-review'),
-    responsive: [{
-      breakpoint: 900,
-      settings: {
-        vertical: false,
-        verticalSwiping: false,
-        dots: true,
-        slidesToShow: 1
-      }
-    }]
+    nextArrow: document.querySelector('.feed-arrow-down-review')
   });
+} else {
+  $('.review-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    dots: true,
+    prevArrow: document.querySelector('.feed-arrow-up-review'),
+    nextArrow: document.querySelector('.feed-arrow-down-review')
+  });
+}
 
+if ($(window).width() > 900) {
   $('.overlook-slider').slick({
+
+    
     slidesToShow: 3,
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
     autoplay: false,
-    prevArrow: document.querySelector('.feed-arrow-up-overlook'),
-    nextArrow: document.querySelector('.feed-arrow-down-overlook'),
-    responsive: [{
-      breakpoint: 900,
-      settings: {
-        vertical: false,
-        verticalSwiping: false,
-        dots: true,
-        slidesToShow: 1
-      }
-    }]
+    prevArrow: document.querySelector('.feed-arrow-up-review'),
+    nextArrow: document.querySelector('.feed-arrow-down-review')
   });
+} else {
+  $('.overlook-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    dots: true,
+    prevArrow: document.querySelector('.feed-arrow-up-review'),
+    nextArrow: document.querySelector('.feed-arrow-down-review')
+  });
+}
 
   // аккордеон
 
