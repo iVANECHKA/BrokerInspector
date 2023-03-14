@@ -72,7 +72,16 @@ $(document).ready(function () {
     verticalSwiping: true,
     autoplay: false,
     prevArrow: document.querySelector('.feed-arrow-up-review'),
-    nextArrow: document.querySelector('.feed-arrow-down-review')
+    nextArrow: document.querySelector('.feed-arrow-down-review'),
+    responsive: [{
+      breakpoint: 900,
+      settings: {
+        vertical: false,
+        verticalSwiping: false,
+        dots: true,
+        slidesToShow: 1
+      }
+    }]
   });
 
   $('.overlook-slider').slick({
@@ -82,7 +91,16 @@ $(document).ready(function () {
     verticalSwiping: true,
     autoplay: false,
     prevArrow: document.querySelector('.feed-arrow-up-overlook'),
-    nextArrow: document.querySelector('.feed-arrow-down-overlook')
+    nextArrow: document.querySelector('.feed-arrow-down-overlook'),
+    responsive: [{
+      breakpoint: 900,
+      settings: {
+        vertical: false,
+        verticalSwiping: false,
+        dots: true,
+        slidesToShow: 1
+      }
+    }]
   });
 
   // аккордеон

@@ -182,3 +182,40 @@
 .feed-show-all-link:hover {
     opacity: .7;
 }
+
+@media (max-width: 900px) {
+    .feed-content {
+        flex-direction: column;
+
+    }
+
+    .feed-block-wrapper {
+        margin: 0 auto;
+    }
+
+    .feed-block {
+        margin: 0 10px;
+    }
+
+    .feed-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .feed-title-wrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .feed-arrows-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .feed-date {
+        margin-top: 2px;
+    }
+
+    .overlook-slider {
+        width: 360px;
+    }
+}
