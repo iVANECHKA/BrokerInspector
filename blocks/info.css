@@ -102,3 +102,46 @@
     opacity: .8;
     margin-top: 20px;
 }
+
+@media (max-width: 900px) {
+    .info {
+        padding-top: 60px;
+    }
+
+    .info-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .info-block {
+        flex-direction: column-reverse;
+        padding: 0 15px;
+        margin-bottom: 40px;
+    }
+
+    .info-block:nth-of-type(2n) {
+        flex-direction: column;
+    }
+
+    .info-content-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .info-image {
+        width: 360px;
+        height: 240px;
+    }
+
+    .info-content-title {
+        margin: 20px 0;
+    }
+
+    .info-text {
+        margin: 0;
+    }
+
+    .info-faq-block {
+        width: 320px;
+    }
+}

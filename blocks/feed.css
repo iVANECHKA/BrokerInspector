@@ -19,6 +19,10 @@
     width: 590px;
 }
 
+.review-slider {
+    width: 590px;
+}
+
 .feed-reviews {
     width: 100%;
     display: flex;
@@ -191,6 +195,10 @@
 
     }
 
+    .feed-overlook {
+        background-color: #fbfbfb;
+    }
+
     .feed-block-wrapper {
         margin: 0 auto;
     }
@@ -213,6 +221,10 @@
         flex-direction: column-reverse;
     }
 
+    .feed-arrows {
+        display: none;
+    }
+
     .feed-date {
         margin-top: 2px;
     }
@@ -221,10 +233,19 @@
         width: 360px;
     }
 
+    .review-slider {
+        width: 360px;
+    }
+
+    .feed-show-all-link {
+        display: none;
+    }
+
     .slick-dots {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0;
     }
 
     .slick-dots li {

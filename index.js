@@ -1,114 +1,172 @@
+const header = document.querySelector('.header');
+const headerLogo = document.querySelector('.header-logo');
+const headerNumber = document.querySelector('.header-number');
+const headerMail = document.querySelector('.header-mail');
+const headerMenuLinks = document.querySelectorAll('.header-menu-link');
+const headerIcons = Array.from(document.querySelectorAll('.header-icon'));
+const headerMobileBtn = document.querySelector('.header-mobile-btn');
+
+
+function lockScroll() {
+  $html = $('html');
+  $body = $('body');
+  var initWidth = $body.outerWidth();
+  var initHeight = $body.outerHeight();
+
+  var scrollPosition = [
+    self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+    self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+  ];
+  $html.data('scroll-position', scrollPosition);
+  $html.data('previous-overflow', $html.css('overflow'));
+  $html.css('overflow', 'hidden');
+  window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+  var marginR = $body.outerWidth() - initWidth;
+  var marginB = $body.outerHeight() - initHeight;
+  $body.css({ 'margin-right': marginR, 'margin-bottom': marginB });
+}
+
+function unlockScroll() {
+  $html = $('html');
+  $body = $('body');
+  $html.css('overflow', $html.data('previous-overflow'));
+  var scrollPosition = $html.data('scroll-position');
+  window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+  $body.css({ 'margin-right': 0, 'margin-bottom': 0 });
+}
+
+function makeHeaderWhite() {
+  header.classList.add('header-white');
+  headerLogo.classList.add('header-logo-white');
+  headerNumber.classList.add('header-number-white');
+  headerMail.classList.add('header-mail-white');
+  headerMobileBtn.classList.add('header-mobile-btn-white');
+  headerMenuLinks.forEach((link) => {
+    link.classList.add('header-menu-link-white');
+  });
+
+
+  document.querySelector('.header-viber').style.backgroundImage = 'url(./images/viber-dark.svg)';
+  document.querySelector('.header-facebook').style.backgroundImage = 'url(./images/facebook-dark.svg)';
+  document.querySelector('.header-vk').style.backgroundImage = 'url(./images/vk-dark.svg)';
+  headerIcons.forEach((icon) => {
+    if (icon.classList.contains('header-viber')) {
+
+      icon.addEventListener('mouseenter', () => {
+        icon.classList.add('header-viber-white-hover');
+      })
+      icon.addEventListener('mouseleave', () => {
+        icon.classList.remove('header-viber-white-hover');
+      })
+
+    } else return;
+  })
+}
+
+function makeHeaderBlack() {
+  header.classList.remove('header-white');
+  headerLogo.classList.remove('header-logo-white');
+  headerNumber.classList.remove('header-number-white');
+  headerMail.classList.remove('header-mail-white');
+  headerMobileBtn.classList.remove('header-mobile-btn-white');
+  headerMenuLinks.forEach((link) => {
+    link.classList.remove('header-menu-link-white');
+  });
+  document.querySelector('.header-viber').style.backgroundImage = 'url(./images/viber.svg)';
+  document.querySelector('.header-facebook').style.backgroundImage = 'url(./images/facebook.svg)';
+  document.querySelector('.header-vk').style.backgroundImage = 'url(./images/vk.svg)';
+}
+
 // 2 состояния для шапки
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    const header = document.querySelector('.header');
-    const headerLogo = document.querySelector('.header-logo');
-    const headerNumber = document.querySelector('.header-number');
-    const headerMail = document.querySelector('.header-mail');
-    const headerMenuLinks = document.querySelectorAll('.header-menu-link');
-    const headerIcons = Array.from(document.querySelectorAll('.header-icon'));
-
 
     if (entry.isIntersecting) {
-      header.classList.remove('header-white');
-      headerLogo.classList.remove('header-logo-white');
-      headerNumber.classList.remove('header-number-white');
-      headerMail.classList.remove('header-mail-white');
-      headerMenuLinks.forEach((link) => {
-        link.classList.remove('header-menu-link-white');
-      });
-      document.querySelector('.header-viber').style.backgroundImage = 'url(./images/viber.svg)';
-      document.querySelector('.header-facebook').style.backgroundImage = 'url(./images/facebook.svg)';
-      document.querySelector('.header-vk').style.backgroundImage = 'url(./images/vk.svg)';
+
+      makeHeaderBlack();
 
       return;
     }
 
+    makeHeaderWhite();
 
-    header.classList.add('header-white');
-    headerLogo.classList.add('header-logo-white');
-    headerNumber.classList.add('header-number-white');
-    headerMail.classList.add('header-mail-white');
-    headerMenuLinks.forEach((link) => {
-      link.classList.add('header-menu-link-white');
-    });
-    document.querySelector('.header-viber').style.backgroundImage = 'url(./images/viber-dark.svg)';
-    document.querySelector('.header-facebook').style.backgroundImage = 'url(./images/facebook-dark.svg)';
-    document.querySelector('.header-vk').style.backgroundImage = 'url(./images/vk-dark.svg)';
-    headerIcons.forEach((icon) => {
-      if (icon.classList.contains('header-viber')) {
-
-        icon.addEventListener('mouseenter', () => {
-          icon.classList.add('header-viber-white-hover');
-        })
-        icon.addEventListener('mouseleave', () => {
-          icon.classList.remove('header-viber-white-hover');
-        })
-
-      } else return;
-    })
   });
 });
 
 observer.observe(document.querySelector('.header-anchor'));
 
+
 // Слайдеры
 
+
 $(document).ready(function () {
-  $('.news-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: false,
-    prevArrow: document.querySelector('.previous-arrow'),
-    nextArrow: document.querySelector('.next-arrow')
-  });
 
   if ($(window).width() > 900) {
-  $('.review-slider').slick({
 
-    
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    autoplay: false,
-    prevArrow: document.querySelector('.feed-arrow-up-review'),
-    nextArrow: document.querySelector('.feed-arrow-down-review')
-  });
-} else {
-  $('.review-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    dots: true,
-    prevArrow: document.querySelector('.feed-arrow-up-review'),
-    nextArrow: document.querySelector('.feed-arrow-down-review')
-  });
-}
+    $('.news-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: false,
+      prevArrow: document.querySelector('.previous-arrow'),
+      nextArrow: document.querySelector('.next-arrow')
+    });
 
-if ($(window).width() > 900) {
-  $('.overlook-slider').slick({
+  } else {
+    $('.news-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: false,
+      dots: true,
+      arrows: false
+    });
+  }
 
-    
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    autoplay: false,
-    prevArrow: document.querySelector('.feed-arrow-up-review'),
-    nextArrow: document.querySelector('.feed-arrow-down-review')
-  });
-} else {
-  $('.overlook-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    dots: true,
-    prevArrow: document.querySelector('.feed-arrow-up-review'),
-    nextArrow: document.querySelector('.feed-arrow-down-review')
-  });
-}
+  if ($(window).width() > 900) {
+    $('.review-slider').slick({
+
+
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      vertical: true,
+      verticalSwiping: true,
+      autoplay: false,
+      prevArrow: document.querySelector('.feed-arrow-up-review'),
+      nextArrow: document.querySelector('.feed-arrow-down-review')
+    });
+  } else {
+    $('.review-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      dots: true,
+      arrows: false
+    });
+  }
+
+  if ($(window).width() > 900) {
+    $('.overlook-slider').slick({
+
+
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      vertical: true,
+      verticalSwiping: true,
+      autoplay: false,
+      prevArrow: document.querySelector('.feed-arrow-up-review'),
+      nextArrow: document.querySelector('.feed-arrow-down-review')
+    });
+  } else {
+    $('.overlook-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      dots: true,
+      arrows: false
+    });
+  }
 
   // аккордеон
 
@@ -144,7 +202,7 @@ blocks.forEach((block) => {
 
       block.querySelector('.info-faq-img').classList.toggle('trans-active');
     }
-})
+  })
 
 })
 
@@ -214,6 +272,21 @@ $('.popup-close-btn').click(() => {
 $('.review-button').click((e) => {
   e.preventDefault();
 });
+
+$('.header-mobile-btn').click(() => {
+
+  if (!document.querySelector('.header-mobile-btn-active')) {
+    $('.header-mobile-btn').addClass('header-mobile-btn-active');
+    makeHeaderWhite();
+    $('.mobile-header').addClass('mobile-header-active');
+    lockScroll();
+  } else {
+    $('.header-mobile-btn').removeClass('header-mobile-btn-active');
+    makeHeaderBlack();
+    $('.mobile-header').removeClass('mobile-header-active');
+    unlockScroll();
+  }
+})
 
 
 // Валидация

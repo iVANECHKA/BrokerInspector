@@ -160,3 +160,37 @@
     opacity: 0.6;
     text-align: right;
 }
+
+@media (max-width: 900px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer::after {
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 50% 1%;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-list {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .footer-list-item {
+        margin: 0 0 15px 0;
+    }
+
+    .footer-list-item:last-child {
+        margin: 0;
+    }
+
+    .footer-rights {
+        text-align: left;
+        margin: 30px 0 0 0;
+    }
+}

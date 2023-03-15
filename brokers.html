@@ -14,7 +14,9 @@
     <div class="header-anchor"></div>
     <header class="header header-white header-shadow">
         <div class="header-wrapper">
-            <p class="header-logo header-logo-white">Брокер Инспектор</p>
+            <a href="./index.html">
+                <p class="header-logo header-logo-white">Брокер Инспектор</p>
+            </a>
             <div class="header-info">
                 <a class="header-number header-number-white" href="tel: 8800XXXXXXX">8 (800) XXX-XX-XX</a>
                 <p class="header-mail header-mail-white">broker@info.com</p>
@@ -410,20 +412,26 @@
                 <p class="footer-mail">broker@info.com</p>
                 <p class="footer-address">Москва, Смоленский переулок 14, оф. 234а</p>
                 <div class="footer-social-icons">
-                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-viber"></div></a>
-                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-facebook"></div></a>
-                    <a href="#" class="footer-social-link"><div class="footer-social-icon footer-vk"></div></a>
+                    <a href="#" class="footer-social-link">
+                        <div class="footer-social-icon footer-viber"></div>
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <div class="footer-social-icon footer-facebook"></div>
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <div class="footer-social-icon footer-vk"></div>
+                    </a>
                 </div>
             </div>
             <div class="footer-right-wrapper">
                 <nav>
                     <ul class="footer-list">
-                        <li class="footer-list-item"><a href="#">Белые брокеры</a></li>
-                        <li class="footer-list-item"><a href="#">Черный список</a></li>
-                        <li class="footer-list-item"><a href="#">Обзоры</a></li>
-                        <li class="footer-list-item"><a href="#">Отзывы</a></li>
-                        <li class="footer-list-item"><a href="#">FAQ</a></li>
-                        <li class="footer-list-item"><a href="#">О нас</a></li>
+                        <li class="footer-list-item"><a href="./company-page.html">Белые брокеры</a></li>
+                        <li class="footer-list-item"><a href="./brokers.html">Черный список</a></li>
+                        <li class="footer-list-item"><a href="./catalog.html">Обзоры</a></li>
+                        <li class="footer-list-item"><a href="./catalog.html">Отзывы</a></li>
+                        <li class="footer-list-item"><a href="./index.html#faq">FAQ</a></li>
+                        <li class="footer-list-item"><a href="./index.html#info">О нас</a></li>
                     </ul>
                 </nav>
                 <p class="footer-rights">Все права защищены.</p>
@@ -441,13 +449,16 @@
             <div class="popup-content">
                 <form name="refund-form" class="popup-form">
                     <p class="popup-label">Ваше имя</p>
-                    <input type="text" id="refund-name-input" class="popup-input" name="name" placeholder="Не указано" minlength="2" required>
+                    <input type="text" id="refund-name-input" class="popup-input" name="name" placeholder="Не указано"
+                        minlength="2" required>
                     <span class="popup-input-error refund-name-input-error"></span>
                     <p class="popup-label">Номер телефона</p>
-                    <input type="tel" id="refund-tel-input" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__" required>
+                    <input type="tel" id="refund-tel-input" name="phone" class="popup-input tel-input"
+                        placeholder="+7 (___) ___-__-__" required>
                     <span class="popup-input-error refund-tel-input-error"></span>
                     <p class="popup-label">E-Mail</p>
-                    <input type="email" id="refund-email-input" class="popup-input refund-email" name="email" placeholder="Не указан">
+                    <input type="email" id="refund-email-input" class="popup-input refund-email" name="email"
+                        placeholder="Не указан">
                     <span class="popup-input-error refund-email-input-error"></span>
                     <p class="popup-label">Название компании</p>
                     <div class="select_wrap">
@@ -497,13 +508,16 @@
             <div class="popup-content">
                 <form name="review-form" class="popup-form">
                     <p class="popup-label popup-questions-label">1. Какую сумму вы инвестировали?</p>
-                    <input type="text" id="question-sum-input" class="popup-input" name="sum" placeholder="Не указано" minlength="3" required>
+                    <input type="text" id="question-sum-input" class="popup-input" name="sum" placeholder="Не указано"
+                        minlength="3" required>
                     <span class="popup-input-error question-sum-input-error"></span>
                     <p class="popup-label popup-questions-label">2. Когда вы инвестировали?</p>
-                    <input type="text" id="question-when-input" name="when" class="popup-input" placeholder="Не указано" minlength="3" required>
+                    <input type="text" id="question-when-input" name="when" class="popup-input" placeholder="Не указано"
+                        minlength="3" required>
                     <span class="popup-input-error question-when-input-error"></span>
                     <p class="popup-label popup-questions-label">3. Почему вы выбрали именно этого брокера?</p>
-                    <textarea class="popup-input popup-questions-textarea" id="question-why-input" name="why" placeholder="Не указано" minlength="3" required></textarea>
+                    <textarea class="popup-input popup-questions-textarea" id="question-why-input" name="why"
+                        placeholder="Не указано" minlength="3" required></textarea>
                     <span class="popup-input-error question-why-input-error"></span>
                     <button class="popup-button questions-button">Запросить возврат</button>
                 </form>
@@ -523,7 +537,8 @@
                     <p class="popup-label">Ваше имя</p>
                     <input type="text" class="popup-input" name="name" placeholder="Не указано" minlength="2" required>
                     <p class="popup-label">Номер телефона</p>
-                    <input type="tel" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__" required>
+                    <input type="tel" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__"
+                        required>
                     <p class="popup-label">E-Mail</p>
                     <input type="email" class="popup-input" name="email" placeholder="Не указан">
                     <p class="popup-label">Сфера деятельности</p>
