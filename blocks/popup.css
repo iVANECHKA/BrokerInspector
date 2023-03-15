@@ -255,3 +255,10 @@
 .popup-input-error-active {
     visibility: visible;
 }
+
+@media (max-width: 900px) {
+    .select_wrap .select_ul {
+        top: -205px;
+    }
+
+}
