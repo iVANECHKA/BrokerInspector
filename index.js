@@ -155,8 +155,8 @@ $(document).ready(function () {
       vertical: true,
       verticalSwiping: true,
       autoplay: false,
-      prevArrow: document.querySelector('.feed-arrow-up-review'),
-      nextArrow: document.querySelector('.feed-arrow-down-review')
+      prevArrow: document.querySelector('.feed-arrow-up-overlook'),
+      nextArrow: document.querySelector('.feed-arrow-down-overlook')
     });
   } else {
     $('.overlook-slider').slick({
