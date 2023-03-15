@@ -261,6 +261,8 @@ function closePopup(popup) {
 
 // Слушатели
 
+
+
 $('.intro-button').click(() => {
   openPopup($('.review-popup'))
 });
@@ -273,21 +275,28 @@ $('.review-button').click((e) => {
   e.preventDefault();
 });
 
+
+// Открытие/Закрытие мобильного меню
 $('.header-mobile-btn').click(() => {
 
   if (!document.querySelector('.header-mobile-btn-active')) {
     $('.header-mobile-btn').addClass('header-mobile-btn-active');
     makeHeaderWhite();
-    $('.mobile-header').addClass('mobile-header-active');
+    $('.mobile-header').slideDown(500);
     lockScroll();
   } else {
     $('.header-mobile-btn').removeClass('header-mobile-btn-active');
-    makeHeaderBlack();
-    $('.mobile-header').removeClass('mobile-header-active');
+    // makeHeaderBlack();
+    $('.mobile-header').slideUp(500);
     unlockScroll();
   }
 })
 
+$('.mobile-header-menu-item').click(() => {
+  $('.header-mobile-btn').removeClass('header-mobile-btn-active');
+  unlockScroll();
+  $('.mobile-header').slideUp(500);
+})
 
 // Валидация
 

@@ -42,29 +42,33 @@
             </nav>
             <div class="header-mobile-btn"></div>
         </div>
-    </header>
 
-    <div class="mobile-header">
-        <ul class="mobile-header-menu-list">
-            <li class="mobile-header-menu-item"><a href="./company-page.html">Белые брокеры</a></li>
-            <li class="mobile-header-menu-item"><a href="./brokers.html">Черный список</a></li>
-            <li class="mobile-header-menu-item"><a href="./catalog.html">Обзоры</a></li>
-            <li class="mobile-header-menu-item"><a href="./catalog.html">Отзывы</a></li>
-            <li class="mobile-header-menu-item"><a href="./index.html#faq">FAQ</a></li>
-            <li class="mobile-header-menu-item"><a href="./index.html#info">О нас</a></li>
-        </ul>
-        <div class="mobile-header-bottom">
-            <div class="mobile-header-bottom-left">
-                <p class="mobile-header-number">8 (800) XXX-XX-XX</p>
-                <p class="mobile-header-email">broker@info.com</p>
-            </div>
-            <div class="mobile-header-bottom-right">
-                <div class="mobile-header-icon mobile-header-viber"></div>
-                <div class="mobile-header-icon mobile-header-facebook"></div>
-                <div class="mobile-header-icon mobile-header-vk"></div>
+        <div class="mobile-header">
+            <div class="mobile-header-wrapper">
+                <ul class="mobile-header-menu-list">
+                    <li class="mobile-header-menu-item"><a href="./company-page.html">Белые брокеры</a></li>
+                    <li class="mobile-header-menu-item"><a href="./brokers.html">Черный список</a></li>
+                    <li class="mobile-header-menu-item"><a href="./catalog.html">Обзоры</a></li>
+                    <li class="mobile-header-menu-item"><a href="./catalog.html">Отзывы</a></li>
+                    <li class="mobile-header-menu-item"><a href="./index.html#faq-mobile">FAQ</a></li>
+                    <li class="mobile-header-menu-item"><a href="./index.html#info-mobile">О нас</a></li>
+                </ul>
+                <div class="mobile-header-bottom">
+                    <div class="mobile-header-bottom-left">
+                        <p class="mobile-header-number">8 (800) XXX-XX-XX</p>
+                        <p class="mobile-header-email">broker@info.com</p>
+                    </div>
+                    <div class="mobile-header-bottom-right">
+                        <div class="mobile-header-icon mobile-header-viber"></div>
+                        <div class="mobile-header-icon mobile-header-facebook"></div>
+                        <div class="mobile-header-icon mobile-header-vk"></div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+
+
     <main>
         <section class="intro">
             <div class="intro-content">
@@ -424,7 +428,7 @@
                             in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
                     </article>
-                    <img src="./images/howDoWeWork.png" alt="" class="info-image">
+                    <img src="./images/howDoWeWork.png" id="info-mobile" alt="" class="info-image">
                 </div>
 
                 <div class="info-block">
@@ -543,7 +547,7 @@
                             </div>
                         </div>
                     </article>
-                    <img src="./images/faq.png" alt="" class="info-image">
+                    <img src="./images/faq.png" id="faq-mobile" alt="" class="info-image">
                 </div>
             </div>
         </section>
@@ -723,10 +727,12 @@
             <div class="popup-content">
                 <form name="review-form" class="popup-form">
                     <p class="popup-label">Ваше имя</p>
-                    <input type="text" id="name-input" class="popup-input" name="name" placeholder="Не указано" minlength="2" required>
+                    <input type="text" id="name-input" class="popup-input" name="name" placeholder="Не указано"
+                        minlength="2" required>
                     <span class="popup-input-error name-input-error"></span>
                     <p class="popup-label">Номер телефона</p>
-                    <input type="tel" id="tel-input" name="phone" class="popup-input tel-input" placeholder="+7 (___) ___-__-__" required>
+                    <input type="tel" id="tel-input" name="phone" class="popup-input tel-input"
+                        placeholder="+7 (___) ___-__-__" required>
                     <span class="popup-input-error tel-input-error"></span>
                     <p class="popup-label">E-Mail</p>
                     <input type="email" id="email-input" class="popup-input" name="email" placeholder="Не указан">
@@ -764,7 +770,8 @@
                         </ul>
                     </div>
                     <p class="popup-label">Отзыв</p>
-                    <textarea class="popup-input review-input" id="text-input" placeholder="Текст отзыва" required></textarea>
+                    <textarea class="popup-input review-input" id="text-input" placeholder="Текст отзыва"
+                        required></textarea>
                     <span class="popup-input-error text-input-error"></span>
                     <button class="popup-button review-button">Оставить отзыв</button>
                 </form>

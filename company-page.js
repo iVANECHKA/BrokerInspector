@@ -1,3 +1,34 @@
+function lockScroll() {
+  $html = $('html');
+  $body = $('body');
+  var initWidth = $body.outerWidth();
+  var initHeight = $body.outerHeight();
+
+  var scrollPosition = [
+    self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+    self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+  ];
+  $html.data('scroll-position', scrollPosition);
+  $html.data('previous-overflow', $html.css('overflow'));
+  $html.css('overflow', 'hidden');
+  window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+  var marginR = $body.outerWidth() - initWidth;
+  var marginB = $body.outerHeight() - initHeight;
+  $body.css({ 'margin-right': marginR, 'margin-bottom': marginB });
+}
+
+function unlockScroll() {
+  $html = $('html');
+  $body = $('body');
+  $html.css('overflow', $html.data('previous-overflow'));
+  var scrollPosition = $html.data('scroll-position');
+  window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+  $body.css({ 'margin-right': 0, 'margin-bottom': 0 });
+}
+
+
 $(document).ready(function () {
   $('.news-slider').slick({
     slidesToShow: 5,
@@ -76,6 +107,26 @@ $('.popup-close-btn').click(() => {
   closePopup($('.popup-bg'))
 });
 
+
+// Открытие/Закрытие мобильного меню
+$('.header-mobile-btn').click(() => {
+
+  if (!document.querySelector('.header-mobile-btn-active')) {
+    $('.header-mobile-btn').addClass('header-mobile-btn-active');
+    $('.mobile-header').slideDown(500);
+    lockScroll();
+  } else {
+    $('.header-mobile-btn').removeClass('header-mobile-btn-active');
+    $('.mobile-header').slideUp(500);
+    unlockScroll();
+  }
+})
+
+$('.mobile-header-menu-item').click(() => {
+  $('.header-mobile-btn').removeClass('header-mobile-btn-active');
+  unlockScroll();
+  $('.mobile-header').slideUp(500);
+})
 
 // Валидация
 
@@ -167,5 +218,5 @@ const validationSettings = {
   inputErrorActive: 'popup-input-error-active',
 };
 
-enableValidation(validationSettings);jhkbjy
+enableValidation(validationSettings);
 
