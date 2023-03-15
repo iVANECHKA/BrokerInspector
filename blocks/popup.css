@@ -261,4 +261,17 @@
         top: -205px;
     }
 
+    .refund-button {
+        margin-top: 15px;
+    }
+
+    .popup-input {
+        padding: 15px 15px;
+    }
+
+    .popup-input-error {
+        font-size: 10px;
+        height: 24px;
+        line-height: 12px;
+    }
 }
