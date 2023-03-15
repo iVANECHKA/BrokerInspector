@@ -30,23 +30,37 @@ function unlockScroll() {
 
 
 $(document).ready(function () {
-  $('.news-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: false,
-    prevArrow: document.querySelector('.previous-arrow'),
-    nextArrow: document.querySelector('.next-arrow')
-  });
+  if ($(window).width() > 900) {
 
-  $('.broker-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    autoplay: false,
-    prevArrow: document.querySelector('.brokers-arrow-up'),
-    nextArrow: document.querySelector('.brokers-arrow-down')
-  });
+    $('.news-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: false,
+      prevArrow: document.querySelector('.previous-arrow'),
+      nextArrow: document.querySelector('.next-arrow')
+    });
+
+    $('.broker-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      vertical: true,
+      verticalSwiping: true,
+      autoplay: false,
+      prevArrow: document.querySelector('.brokers-arrow-up'),
+      nextArrow: document.querySelector('.brokers-arrow-down')
+    });
+
+  } else {
+    $('.news-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: false,
+      dots: true,
+      arrows: false
+    });
+
+    $('.news-slider').unslick();
+  }
 });
 
 // Селектор из попапа

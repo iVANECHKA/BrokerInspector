@@ -75,3 +75,34 @@
     font-size: 14px;
     line-height: 17px;
 }
+
+@media (max-width: 900px) {
+    .lists-content {
+        flex-direction: column;
+    }
+
+    .lists-title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    .lists-block {
+        width: 360px;
+        margin-bottom: 15px;
+    }
+
+    .lists-block:last-child {
+        margin-bottom: 0;
+    }
+
+    .lists-block-content {
+        margin: 20px 0 20px 15px;
+        max-width: 200px;
+    }
+
+    .lists-image {
+        width: 120px;
+        min-height: 124px;
+    }
+}

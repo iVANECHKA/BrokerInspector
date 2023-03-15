@@ -30,13 +30,29 @@ function unlockScroll() {
 
 
 $(document).ready(function () {
-  $('.news-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: false,
-    prevArrow: document.querySelector('.previous-arrow'),
-    nextArrow: document.querySelector('.next-arrow')
-  });
+
+
+  if ($(window).width() > 900) {
+
+    $('.news-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: false,
+      prevArrow: document.querySelector('.previous-arrow'),
+      nextArrow: document.querySelector('.next-arrow')
+    });
+
+  } else {
+    $('.news-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: false,
+      dots: true,
+      arrows: false
+    });
+  }
+
+  if ($(window).width() > 900) {
 
   $('.review-slider').slick({
     slidesToShow: 4,
@@ -47,16 +63,29 @@ $(document).ready(function () {
     prevArrow: document.querySelector('.feed-arrow-up'),
     nextArrow: document.querySelector('.feed-arrow-down')
   });
+
+} else {
+  $('.review-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    vertical: false,
+    verticalSwiping: false,
+    arrows: false,
+    dots: true
+  });
+}
 });
+
 
 const specDivides = Array.from(document.querySelectorAll('.feed-spec-divide'));
 
 
 specDivides.forEach((divide) => {
-  if (divide.parentElement.clientWidth < 585) {
+  if (divide.parentElement.clientWidth < 359) {
     do {
       divide.textContent += '_';
-    } while(divide.parentElement.clientWidth < 585)
+    } while(divide.parentElement.clientWidth < 359)
   }
 })
 

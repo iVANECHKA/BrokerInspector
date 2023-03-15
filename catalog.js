@@ -30,13 +30,25 @@ function unlockScroll() {
 
 
 $(document).ready(function () {
-  $('.news-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: false,
-    prevArrow: document.querySelector('.previous-arrow'),
-    nextArrow: document.querySelector('.next-arrow')
-  });
+  if ($(window).width() > 900) {
+
+    $('.news-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: false,
+      prevArrow: document.querySelector('.previous-arrow'),
+      nextArrow: document.querySelector('.next-arrow')
+    });
+
+  } else {
+    $('.news-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: false,
+      dots: true,
+      arrows: false
+    });
+  }
 });
 
 // Селектор из попапа

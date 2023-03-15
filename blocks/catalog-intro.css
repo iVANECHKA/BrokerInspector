@@ -90,3 +90,48 @@
 }
 
 
+@media (max-width: 900px) {
+    .intro {
+        padding: 20px 0 0;
+        background-color: #f2f2f2;
+    }
+
+    .intro-wrapper {
+        width: 360px;
+    }
+
+    .intro-path {
+        margin: 0;
+    }
+
+    .intro-title {
+        font-size: 28px;
+        line-height: 34px;
+        margin: 30px 0;
+    }
+
+    .intro-ad {
+        width: 330px;
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .intro-ad::after {
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .intro-ad-title {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .intro-ad-button {
+        text-align: center;
+        padding: 20px 47px;
+        white-space: nowrap;
+    }
+}
+
