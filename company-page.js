@@ -80,16 +80,37 @@ $(document).ready(function () {
 
 const specDivides = Array.from(document.querySelectorAll('.feed-spec-divide'));
 
+if ($(window).width() > 900) {
 
 specDivides.forEach((divide) => {
-  if (divide.parentElement.clientWidth < 359) {
+  if (divide.parentElement.clientWidth < 585) {
     do {
       divide.textContent += '_';
-    } while(divide.parentElement.clientWidth < 359)
+    } while(divide.parentElement.clientWidth < 585)
   }
 })
 
+} else {
+  specDivides.forEach((divide) => {
+    if (divide.parentElement.clientWidth < 359) {
+      do {
+        divide.textContent += '_';
+      } while(divide.parentElement.clientWidth < 359)
+    }
+  })
+}
 
+// Селектор из попапа
+
+$(".default_option").click(function () {
+  $(this).parent().toggleClass("active");
+});
+
+$(".select_ul li").click(function () {
+  var currentele = $(this).html();
+  $(".default_option li").html(currentele);
+  $(this).parents(".select_wrap").removeClass("active");
+});
 
 // Маска для ввода номера телефона
 
