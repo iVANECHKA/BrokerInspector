@@ -94,9 +94,15 @@ function closePopup (popup) {
 
 // Слушатели
 
-$('.intro-ad-button').click(() => {
-  openPopup($('.refund-popup'))
-});
+if (document.querySelector('.intro-ad-button').textContent == 'Получить консультацию') {
+  $('.intro-ad-button').click(() => {
+    openPopup($('.consult-popup'));
+  })  
+} else {
+  $('.intro-ad-button').click(() => {
+    openPopup($('.refund-popup'));
+  }) 
+}
 
 $('.brokers-victim-link').click(() => {
   openPopup($('.refund-popup'))
