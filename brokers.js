@@ -59,7 +59,6 @@ $(document).ready(function () {
       arrows: false
     });
 
-    $('.news-slider').unslick();
   }
 });
 
